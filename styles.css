@@ -1,0 +1,289 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
+}
+
+body {
+    color: #333;
+    line-height: 1.6;
+    background-color: #f7f7f7;
+}
+
+/* Header */
+header {
+    background-color: #230052; /* Color principal oscuro */
+    color: white;
+    padding: 1rem 0;
+    text-align: center;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+header h1 {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+header nav a {
+    color: white;
+    margin: 0 1rem;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+header nav a:hover {
+    color: #a31f6b; /* Color secundario para hover */
+}
+
+/* Hero Section */
+.hero {
+    background: linear-gradient(135deg, #62368f, #a31f6b);
+    padding: 6rem 0 4rem;
+    text-align: center;
+    margin-top: 70px;
+    color: white;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    font-weight: bold;
+}
+
+.logo {
+    max-width: 150px;
+    margin-top: 1rem;
+}
+
+/* Section Titles */
+.titulo {
+    font-size: 2rem;
+    color: #230052; /* Color principal oscuro */
+    text-align: center;
+    margin: 2rem 0;
+    position: relative;
+    text-transform: uppercase;
+}
+
+.titulo::after {
+    content: "";
+    width: 60px;
+    height: 4px;
+    background: #a31f6b; /* Color para la línea decorativa */
+    display: block;
+    margin: 0.5rem auto 0;
+    border-radius: 2px;
+}
+
+/* Overview and Speaker Sections */
+.overview-container, .speaker-content {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    padding: 2rem;
+    justify-content: center;
+}
+
+.overview-text, .speaker-content p {
+    background: #f9f9f9;
+    padding: 1.5rem;
+    border-radius: 8px;
+    border: 1px solid #ddd;
+    max-width: 400px;
+    text-align: justify;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+/* Benefits Section */
+#beneficios {
+    background: #62368f; /* Color secundario */
+    color: white;
+    padding: 3rem 1rem;
+    text-align: center;
+}
+
+/* Footer */
+footer {
+    background-color: #230052; /* Color principal oscuro */
+    color: white;
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    margin-top: 2rem;
+}
+
+footer p {
+    margin: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .overview-container, .speaker-content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .overview-text, .speaker-content p {
+        max-width: 90%;
+    }
+
+    .titulo {
+        font-size: 1.5rem;
+    }
+}
+
+
+/* Sección de Beneficios (Tarjetas) */
+#beneficios {
+    padding: 2rem 1rem;
+    background-color: #f7f7f7; /* Fondo claro para que destaque */
+    color: #333;
+    text-align: center;
+}
+
+/* Contenedor principal de tarjetas de beneficios */
+.beneficios-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    justify-content: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+/* Tarjeta individual de beneficio */
+.beneficio {
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 1.5rem;
+    width: calc(33.33% - 1rem);
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.beneficio h3 {
+    font-size: 1.25rem;
+    color: #230052; /* Color del título en las tarjetas */
+    margin: 1rem 0 0.5rem;
+}
+
+.beneficio p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Estilo para el icono en cada tarjeta */
+.icono {
+    background-color: #e0d7f5; /* Fondo del icono */
+    border-radius: 10px;
+    width: 50px;
+    height: 50px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.icono img {
+    width: 30px;
+    height: 30px;
+}
+
+/* Diseño responsivo para la sección de beneficios */
+@media (max-width: 768px) {
+    .beneficio {
+        width: calc(50% - 1rem);
+    }
+}
+
+@media (max-width: 480px) {
+    .beneficio {
+        width: 100%;
+    }
+}
+
+/* FAQ Section */
+#faq {
+    padding: 2rem 1rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+
+
+#faq p {
+    color: #555;
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+}
+
+.faq-button {
+    background-color: #a31f6b;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    margin-bottom: 2rem;
+}
+
+.faq-button:hover {
+    background-color: #62368f;
+}
+
+/* FAQ Container */
+.faq-container {
+    border-top: 1px solid #ddd;
+}
+
+.faq-item {
+    border-bottom: 1px solid #ddd;
+    padding: 1rem 0;
+}
+
+.faq-question {
+    font-size: 1.1rem;
+    color: #62368f;
+    font-weight: bold;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.faq-question span {
+    color: #a31f6b;
+    font-size: 1.5rem;
+    margin-right: 0.5rem;
+}
+
+.faq-answer {
+    display: none;
+    color: #333;
+    font-size: 0.95rem;
+    padding-top: 0.5rem;
+    line-height: 1.5;
+}
+
+.faq-answer a {
+    color: #62368f;
+    text-decoration: none;
+}
+
+.faq-answer a:hover {
+    text-decoration: underline;
+}
+
+/*footer*/
+
+/*iconos*/
+
